@@ -34,7 +34,7 @@ public class TabFragment1 extends Fragment {
 
         adapter= new CustomArrayAdapter(events,v.getContext());
 
-        //listView.setAdapter(adapter);
+        listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {

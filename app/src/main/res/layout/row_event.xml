@@ -16,8 +16,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="3"
             android:focusable="false"
-            android:clickable="false"
-            android:inputType="textPersonName"
             android:paddingLeft="15dp"
             android:paddingTop="10dp"
             android:text="Name"
@@ -31,8 +29,6 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:focusable="false"
-            android:clickable="false"
-            android:inputType="textPersonName"
             android:paddingLeft="15dp"
             android:paddingTop="10dp"
             android:text="Name"
@@ -47,12 +43,9 @@
         android:layout_height="wrap_content"
         android:layout_weight="1"
         android:focusable="false"
-        android:clickable="false"
-        android:inputType="textPersonName"
         android:paddingLeft="15dp"
         android:paddingTop="5dp"
         android:text="Name"
         android:textColor="@color/background_material_dark"
         android:textSize="20sp" />
-
 </LinearLayout>
