@@ -4,9 +4,11 @@ package co.davidurbina.haelthybuddy;
  * Created by davidurbina on 4/20/17.
  */
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.Snackbar;
 import android.support.v4.app.Fragment;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -32,16 +34,20 @@ public class TabFragment1 extends Fragment {
 
         adapter= new CustomArrayAdapter(events,v.getContext());
 
-        listView.setAdapter(adapter);
+        //listView.setAdapter(adapter);
         listView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
-
-                Event dataModel= events.get(position);
-
+            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+                Log.i("Frag1","Clcik");
+                Event data = events.get(i);
+                Intent intent = new Intent(getActivity(), DetailActivity.class);
+                intent.putExtra(DetailActivity.NAME_EXTRA,data.getName());
+                intent.putExtra(DetailActivity.TYPE_EXTRA,data.getType());
+                intent.putExtra(DetailActivity.DAY_EXTRA,data.getDay());
+                intent.putExtra(DetailActivity.TIME_EXTRA,data.getTime());
+                startActivity(intent);
             }
         });
-
         return v;
     }
 }

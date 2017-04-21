@@ -1,7 +1,9 @@
 package co.davidurbina.haelthybuddy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.support.design.widget.Snackbar;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +19,7 @@ import java.util.ArrayList;
  * Created by davidurbina on 4/20/17.
  */
 
-public class CustomArrayAdapter extends ArrayAdapter<Event> implements View.OnClickListener{
+public class CustomArrayAdapter extends ArrayAdapter<Event>{
 
     private ArrayList<Event> dataSet;
     Context mContext;
@@ -34,14 +36,6 @@ public class CustomArrayAdapter extends ArrayAdapter<Event> implements View.OnCl
         this.dataSet = data;
         this.mContext=context;
 
-    }
-
-    @Override
-    public void onClick(View v) {
-
-        int position=(Integer) v.getTag();
-        Object object= getItem(position);
-        Event Event=(Event)object;
     }
 
     private int lastPosition = -1;
